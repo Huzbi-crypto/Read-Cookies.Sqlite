@@ -1,4 +1,4 @@
-# Read Cookiies.Sqlite
+# Read Cookies.Sqlite
 
 ## Introduction
 
