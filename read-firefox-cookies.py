@@ -1,8 +1,11 @@
 import sqlite3
 import json
 
+# Ask the user to enter the path to their Firefox profile
+path = input("Enter the path to your Firefox profile: ")
+
 # Connect to the database
-conn = sqlite3.connect('<Path to your Firefox profile>/cookies.sqlite')
+conn = sqlite3.connect(f'{path}\\cookies.sqlite')
 
 # Create a cursor object
 cur = conn.cursor()
