@@ -41,3 +41,4 @@ The program will read from all the cookies.sqlite files present in the profiles 
 - [ ] Give the user option whether to save the output in a json file or not.
 - [ ] Following the above point, if the user wants to save the output of each website or update the json file, then the program should be able to do that.
 - [ ] Maybe add the option to decode the cookies data.
+- [ ] Give the user the option to choose which profile's cookies data to read.
