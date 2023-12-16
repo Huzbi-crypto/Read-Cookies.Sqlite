@@ -18,6 +18,10 @@ This is a basic program that outputs cookies data of firefox browser's cookies.s
 - Enter the website name
 - Output will be displayed
 
+### Note
+
+The program will read from all the cookies.sqlite files present in the profiles folder of firefox in Windows.
+
 ## Current Status
 
 - Right now, the current idea for the program has been decided. The code for the program will be written in python and will be available soon. [Update: Code is available now]
