@@ -24,7 +24,7 @@ The program will read from all the cookies.sqlite files present in the profiles 
 
 ## Current Status
 
-- Right now, the current idea for the program has been decided. The code for the program will be written in python and will be available soon. [Update: Code is available now]
+~~- Right now, the current idea for the program has been decided. The code for the program will be written in python and will be available soon.~~ [Update: Code is available now]
 
 ## Structure of the program
 
