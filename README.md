@@ -30,6 +30,7 @@ This is a basic program that outputs cookies data of firefox browser's cookies.s
 - The program will also save the output in a json file.
 
 ## Future Scope
+
 - [x] Make the code more efficient by using functions.
 - [x] Add a loop so that the user can input multiple website names.
 - [ ] Make it so that the cookies.sqlite file is automatically detected and the user doesn't have to input the path of the file.

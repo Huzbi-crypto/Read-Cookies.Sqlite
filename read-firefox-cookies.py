@@ -1,9 +1,11 @@
-import sqlite3
+import os
 import json
+import sqlite3
 
 def read_cookies(path, website):
+    # print(os.path.join(path, 'cookies.sqlite'))
     # Connect to the database
-    conn = sqlite3.connect(f'{path}\\cookies.sqlite')
+    conn = sqlite3.connect(os.path.join(path, 'cookies.sqlite'))
     
     # Create a cursor object
     cur = conn.cursor()
@@ -32,14 +34,22 @@ def read_cookies(path, website):
     conn.close()
 
 if __name__ == '__main__':
-    # Ask the user to enter the path to their Firefox profile
-    path = input("Enter the path to your Firefox profile: ")
+    # Gets the path to the Firefox profile on Windows
+    path = os.path.join(os.path.expanduser('~'), 'AppData', 'Roaming', 'Mozilla', 'Firefox', 'Profiles')
+    # print(path)
+
+    # get the list of profiles
+    profiles_dir = [d for d in os.listdir(path) if os.path.isdir(os.path.join(path, d))]
+    # print(profiles_dir)
 
     # create a loop to read cookies from multiple websites
     while True:
         website = input("Enter the website (enter 'q' to quit): ")
         if website == 'q':
             break
-        read_cookies(path, website)
+        for profile in profiles_dir:
+            path_with_profile = os.path.join(path, profile)
+            # print(path_with_profile)
+            read_cookies(path_with_profile, website)
         print()
 
